@@ -1,0 +1,242 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    
+    background:
+        /*linear-gradient(
+            to right,
+            rgba($primary-color, 0.9),
+            rgba($primary-color, 0.3)
+        ),*/
+        url(dabula-images/Dabula-Logo.jpg) center top;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.niv-wrapper {
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 28px;
+    align-items: center;
+}
+
+.left-side {
+    display: flex;
+}
+
+.niv-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+.brand > img{
+    width: 5em;
+}
+
+.niv-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.niv-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.niv-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+
+.niv-link-wrapper a:hover {
+    color: black;
+}
+
+.active-niv-link {
+    border-bottom: 1px solid black;
+}
+
+.active-niv-link a {
+    color: black important;
+}
+
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+}
+
+.portfolio-img-background {
+    height: 300px;
+    /*width: 100%;*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.logo-wrapper img {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/*SLIDE STYLES */
+.slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider img{
+    width: 100%;
+    display: none;
+}
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.slider button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.previous{
+   left: 0;
+}
+.next{
+    right: 0;
+}
+@keyframes fade {
+    from {opacity: .5;}
+    to{opacity: 1;}
+}
+
+/*menu scss*/
+.home{
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background:
+       /* linear-gradient(
+            to right,
+            rgba($primary-color, 0.9),
+            rgba($primary-color, 0.3)
+        ),*/
+        url(tr_01ction/tr_01ction/SLYD-TR04.jpg) center top;
+    background-size: cover;
+
+    &__name{
+        font-size: 5rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+       /* border-bottom: 2px solid set-text-color($primary-color);*/
+
+        &--last{
+        /*    color: $secondary-color;*/
+            font-weight: 700;
+        }
+    }
+}
+
+/*
+.profile-image-wrapper img {
+    width: 100%;
+}
+*/
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+   color: lightseagreen; 
+}
+
+/*/media query*/
+@media(max-width: 768px){
+    .logo-wrapper{
+        display: visible;
+    }
+    /*
+    .img-text-wrapper{
+        display: none;
+    }
+    */
+    .portfolio-items-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.social-icons{
+    color: rgb(18, 108, 78);
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+  }
+  .social-icons a{
+    padding: .7rem;
+    transition: all 0.5s ease-in-out;
+  }
+  .social-icons a:hover {
+    color: #3fdc2074;
+  }
+
+footer {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0.4rem;
+    right: 1rem;
+    text-align: right;
+    padding: 1rem;
+    color: #fff;
+  }
